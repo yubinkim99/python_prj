@@ -26,8 +26,8 @@ confirm_frame = Frame(window4)
 confirm_frame.pack(padx=10, pady=10)
 
 # 수강꾸러미 확정 과목 리스트 라벨
-lb6 = Label(confirm_frame, text="수강꾸러미 확정 과목")
-lb6.pack(pady=10)
+lb7 = Label(confirm_frame, text="수강꾸러미 확정 과목")
+lb7.pack(pady=10)
 
 # 두 번째 프레임(초과 과목)
 fail_frame = Frame(window4)
