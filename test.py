@@ -11,8 +11,7 @@ def generate_random_number():
         output_text = f"{list_market[i]}: {random_number}/{fu11_number}"
         
         if random_number < fu11_number:
-            new_label = Label(confirm_frame, text=output_text)
-            new_label.pack()
+             lb7.insert(END, output_text)
         else:
             lb9.insert(END, output_text)
 
@@ -21,24 +20,20 @@ window4 = Tk()
 window4.title("수강꾸러미 결과")
 window4.geometry('400x600')
 
-# 첫 번째 프레임(확정 과목)
-confirm_frame = Frame(window4)
-confirm_frame.pack(padx=10, pady=10)
-
 # 수강꾸러미 확정 과목 리스트 라벨
-lb7 = Label(confirm_frame, text="수강꾸러미 확정 과목")
+lb6 = Label(text="수강꾸러미 확정 과목")
+lb6.pack(padx=10, pady=10)
+
+# 수강꾸러미 확정 과목 리스트
+lb7 = Listbox(width=50)
 lb7.pack(pady=10)
 
-# 두 번째 프레임(초과 과목)
-fail_frame = Frame(window4)
-fail_frame.pack(padx=10, pady=20)
-
 # 초과 과목 리스트 라벨
-lb8 = Label(fail_frame, text="초과 과목")
+lb8 = Label(text="초과 과목")
 lb8.pack(padx=10, pady=10)
 
-# 수강꾸러미 실패 과목 리스트
-lb9 = Listbox(fail_frame, width=60)
+# 초과 과목 리스트
+lb9 = Listbox(width=50)
 lb9.pack(padx=10, pady=10)
 
 # 프로그램 시작 시 함수 호출
